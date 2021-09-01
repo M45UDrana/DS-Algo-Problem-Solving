@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+typedef long long ll;
+typedef pair<int, int> pii;
+typedef pair<string, int> psi;
+ 
+#define ff first
+#define ss second
+#define pb(a) push_back(a)
+#define mp(a,b) make_pair(a,b)
+#define d(a,b,c) cout<<a<<" "<<b<<" "<<c<<'\n'
+#define IO ios_base::sync_with_stdio(0);cin.tie(0);
+ 
+int main()
+{
+    IO;
+    int t; cin >> t;
+    while(t--)
+    {
+		int n; cin >> n;
+		string s; cin >> s;
+		bool flg = false;
+		if(s[0] == '2' and s[1] == '0' and s[2] == '2'
+				and s[3] == '0')
+			flg = true;
+		if(s[0] == '2' and s[1] == '0' and s[2] == '2'
+				and s[n-1] == '0')
+			flg = true;
+		if(s[0] == '2' and s[1] == '0' and s[n-2] == '2'
+				and s[n-1] == '0')
+			flg = true;
+		if(s[0] == '2' and s[n-3] == '0' and s[n-2] == '2'
+				and s[n-1] == '0')
+			flg = true;
+		if(s[n-4] == '2' and s[n-3] == '0' and s[n-2] == '2'
+				and s[n-1] == '0')
+			flg = true;
+		if(flg)
+			cout << "YES" << endl;
+		else cout << "NO" << endl;
+
+	}
+	return 0;
+}
